@@ -1,8 +1,8 @@
 const categoryQuery = `
-CREATE TABLE category (
+CREATE TABLE IF NOT EXISTS category (
   category_id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   code VARCHAR(255)
 );`;
 
-modules.exports = categoryQuery;
+module.exports = categoryQuery;
